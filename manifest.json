@@ -6,8 +6,8 @@
       "name": "Grafo",
       "type": "WEB",
       "url": "https://github.com/dapperlatam/force-directed-graph-looker-studio/blob/main/bundle.js",
-      "configUrl": "https://tusitio.com/dist/config.json",
-      "styleUrl": "https://tusitio.com/dist/styles.css"
+      "configUrl": "https://github.com/dapperlatam/force-directed-graph-looker-studio/blob/main/config.json",
+      "styleUrl": "https://github.com/dapperlatam/force-directed-graph-looker-studio/blob/main/styles.css"
     }
   ],
   "devMode": true

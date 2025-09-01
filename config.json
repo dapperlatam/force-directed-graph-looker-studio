@@ -1,0 +1,110 @@
+{
+  "data": [
+    {
+      "id": "sourceNode",
+      "label": "Source Node",
+      "type": "DIMENSION",
+      "options": {
+        "min": 1,
+        "max": 1
+      }
+    },
+    {
+      "id": "targetNode", 
+      "label": "Target Node",
+      "type": "DIMENSION",
+      "options": {
+        "min": 1,
+        "max": 1
+      }
+    },
+    {
+      "id": "edgeWeight",
+      "label": "Edge Weight",
+      "type": "METRIC",
+      "options": {
+        "min": 0,
+        "max": 1
+      }
+    },
+    {
+      "id": "edgeColorWeight",
+      "label": "Edge Color Weight",
+      "type": "METRIC",
+      "options": {
+        "min": 0,
+        "max": 1
+      }
+    }
+  ],
+  "style": [
+    {
+      "id": "sourceNodeStyle",
+      "label": "Source Node Settings",
+      "elements": [
+        {
+          "id": "sourceNodeWeight",
+          "label": "Source Node Weight",
+          "type": "SLIDER",
+          "defaultValue": 10,
+          "options": {
+            "min": 1,
+            "max": 50
+          }
+        },
+        {
+          "id": "sourceNodeColor",
+          "label": "Source Node Color",
+          "type": "FILL_COLOR",
+          "defaultValue": {
+            "color": "#4285F4"
+          }
+        },
+        {
+          "id": "sourceNodeLabelColor",
+          "label": "Source Node Label Color",
+          "type": "FILL_COLOR",
+          "defaultValue": {
+            "color": "#000000"
+          }
+        }
+      ]
+    },
+    {
+      "id": "targetNodeStyle",
+      "label": "Target Node Settings", 
+      "elements": [
+        {
+          "id": "targetNodeWeight",
+          "label": "Target Node Weight",
+          "type": "SLIDER",
+          "defaultValue": 10,
+          "options": {
+            "min": 1,
+            "max": 50
+          }
+        },
+        {
+          "id": "targetNodeColor",
+          "label": "Target Node Color",
+          "type": "FILL_COLOR",
+          "defaultValue": {
+            "color": "#EA4335"
+          }
+        },
+        {
+          "id": "targetNodeLabelColor",
+          "label": "Target Node Label Color",
+          "type": "FILL_COLOR",
+          "defaultValue": {
+            "color": "#000000"
+          }
+        }
+      ]
+    }
+  ],
+  "interactions": {
+    "id": "onClick",
+    "supportedActions": ["FILTER"]
+  }
+}

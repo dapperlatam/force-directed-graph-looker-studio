@@ -1,0 +1,166 @@
+/* Estilos generales */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Google Sans', Arial, sans-serif;
+  overflow: hidden;
+}
+
+#myViz {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  position: relative;
+}
+
+/* Estilos para el SVG */
+svg {
+  display: block;
+  cursor: default;
+}
+
+/* Estilos para nodos */
+.nodes circle {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nodes circle:hover {
+  stroke: #333;
+  stroke-width: 3px;
+  filter: brightness(1.2);
+}
+
+/* Estilos para enlaces */
+.links line {
+  transition: stroke-opacity 0.3s ease;
+}
+
+.nodes circle:hover ~ .links line,
+.links line:hover {
+  stroke-opacity: 0.8;
+}
+
+/* Estilos para etiquetas de nodos */
+.node-labels text {
+  font-weight: 500;
+  text-shadow: 
+    -1px -1px 0 #fff,  
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+  cursor: pointer;
+  user-select: none;
+  transition: font-size 0.3s ease;
+}
+
+.node-labels text:hover {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Efectos visuales */
+.nodes circle {
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.nodes circle,
+.links line,
+.node-labels text {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .node-labels text {
+    font-size: 10px;
+  }
+  
+  .nodes circle {
+    stroke-width: 1px;
+  }
+}
+
+/* Estados de loading */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+  color: #666;
+}
+
+.loading::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #4285F4;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Tooltip personalizado */
+.tooltip {
+  position: absolute;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tooltip.visible {
+  opacity: 1;
+}
+
+/* Controles de zoom (si se implementan más adelante) */
+.zoom-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.zoom-btn {
+  width: 30px;
+  height: 30px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.zoom-btn:hover {
+  background: #f0f0f0;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Grafo de relaciones (D3)",
+  "organization": "Dapper",
+  "components": [
+    {
+      "name": "Grafo",
+      "type": "WEB",
+      "url": "https://tusitio.com/dist/bundle.js",
+      "configUrl": "https://tusitio.com/dist/config.json",
+      "styleUrl": "https://tusitio.com/dist/styles.css"
+    }
+  ],
+  "devMode": true
+}
